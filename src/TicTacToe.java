@@ -23,5 +23,8 @@ public class TicTacToe {
            System.out.println(" -------------");
        }
    }
+   void placeMark(int row, int column, char mark){
+        board[row][column] =mark;
+   }
 
 }
