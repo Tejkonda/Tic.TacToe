@@ -6,5 +6,6 @@ public class LaunchGame {
         T.placeMark(1,1,'O');
         T.placeMark(0,2,'O');
         T.displayBoard();
+        System.out.println(T.checkRowWin());
     }
 }

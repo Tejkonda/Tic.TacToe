@@ -23,8 +23,29 @@ public class TicTacToe {
            System.out.println(" -------------");
        }
    }
-   void placeMark(int row, int column, char mark){
-        board[row][column] =mark;
+   void placeMark(int row, int column, char mark) {
+       if (row >= 0 && row <= 2 && column >= 0 && column <= 2) {
+           board[row][column] = mark;
+       }
+       else {
+           System.out.println("invalid input");
+       }
+   }
+    boolean checkRowWin(){
+        for (int i=0; i<=2; i++){
+            if(board[i][0]==board[i][1] && board[i][1]==board[i][2]){
+                return true;
+            }
+        }
+      return true;
+    }
+   boolean checkColWin(){
+        for (int j=0; j<=2; j++){
+            if(board[0][j]==board[1][j] && board[1][j]==board[2][j]){
+                return true;
+            }
+        }
+        return checkRowWin();
    }
 
 }
